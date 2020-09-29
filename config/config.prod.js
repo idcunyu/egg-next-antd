@@ -11,8 +11,8 @@ module.exports = appInfo => {
     wapDomain: 'https://m.xxx.com',
     strapiPath: 'https://www.strapixxx.com',
     strapiAssetsPath: 'https://www.strapixxx.com',
-    zbjPcPath: 'https://www.abc.com/api',
-    zbjMobilePath: 'https://m.abc.com/api'
+    pcPath: 'https://www.abc.com/api',
+    mobilePath: 'https://m.abc.com/api'
   };
 
   return {

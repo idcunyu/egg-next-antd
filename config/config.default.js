@@ -36,8 +36,8 @@ module.exports = appInfo => {
     wapDomain: 'http://m.test.xxx.com', // 项目移动端主域名
     strapiPath: 'http://localhost:1337', // strapi路径
     strapiAssetsPath: 'http://test.strapixxx.com', // strapi资源路径
-    zbjPcPath: 'http://www.abc.com/api', // pc财税项目接口
-    zbjMobilePath: 'http://m.abc.com/api', // wap财税项目接口
+    pcPath: 'http://www.abc.com/api', // pc财税项目接口
+    mobilePath: 'http://m.abc.com/api', // wap财税项目接口
   };
 
   return {

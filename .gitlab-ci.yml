@@ -1,0 +1,33 @@
+stages:
+  - deploy
+
+cache:
+  key: $CI_COMMIT_REF_NAME
+  paths:
+    - node_modules/
+
+test:
+  stage: deploy
+  only:
+    - test
+  variables:
+    EGG_SERVER_ENV: test
+    NODE_ENV: production
+  script:
+    - npm install
+    - npm run build
+    - rsync -rl --delete --exclude=.git ./  /data/www/egg-next-antd
+    - cd /data/www/egg-next-antd
+    - npm run stop
+    - npm run start
+
+product:
+  stage: deploy
+  only:
+    - master
+  script:
+    - cd ..
+    - tar -czf egg-next-antd.tar.gz --exclude '.git' egg-next-antd
+    - scp -r egg-next-antd.tar.gz xxx-server:/tmp/
+    - cat egg-next-antd/.deploy.sh | ssh xxx-server
+

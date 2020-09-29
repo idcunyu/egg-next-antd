@@ -1,0 +1,73 @@
+{
+  "name": "egg-next-antd",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "animate.css": "^3.7.2",
+    "antd": "^3.23.6",
+    "axios": "^0.19.0",
+    "babel-plugin-import": "^1.12.2",
+    "egg": "^2.15.1",
+    "egg-router-plus": "^1.3.1",
+    "egg-scripts": "^2.11.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "js-base64": "^3.4.5",
+    "less": "^3.10.3",
+    "less-vars-to-js": "^1.3.0",
+    "lodash": "^4.17.20",
+    "marked": "^0.7.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "moment": "^2.24.0",
+    "next": "9.0.6",
+    "next-compose-plugins": "^2.2.0",
+    "null-loader": "^3.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "sass-resources-loader": "^2.0.1"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "file-loader": "^4.2.0",
+    "url-loader": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-egg-next-antd",
+    "stop": "egg-scripts stop --title=egg-server-egg-next-antd",
+    "dev": "egg-bin dev --port=7003",
+    "debug": "egg-bin debug",
+    "build": "next build ./next",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "yangwenqianga",
+  "license": "MIT"
+}

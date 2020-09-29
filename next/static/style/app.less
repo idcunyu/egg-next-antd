@@ -1,0 +1,38 @@
+// reset
+* {
+  padding: 0px;
+  margin: 0px;
+  word-break: break-all;
+}
+
+div, span, p {
+  cursor: default;
+}
+
+// antd 样式reset
+.ant-input:focus {
+  box-shadow: none!important;
+}
+.ant-select-selection:focus {
+  box-shadow: none!important;
+}
+.ant-radio-wrapper {
+  & > span {
+    cursor: pointer;
+  }
+}
+.ant-select-selection__rendered {
+  cursor: pointer;
+  & > * {
+    cursor: pointer;
+  }
+}
+.ant-modal-close-x {
+  cursor: pointer;
+}
+
+.ant-message {
+  top: 86px!important;
+}
+
+// 全局类

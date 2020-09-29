@@ -1,0 +1,17 @@
+// mixins.less（建议：以app开头命名）
+.app-btn-hover(){
+  &:hover{
+    transition: all 300ms;
+    background-color: @appBtnHoverColor;
+  }
+}
+.app-about-btn-hover(){
+  &:hover{
+    background-color: @appAboutBtnHoverColor;
+  }
+}
+.text-overflow(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
